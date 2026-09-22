@@ -30,6 +30,10 @@ section{position:relative}.container{width:min(1160px,calc(100% - 44px));margin:
 </style>
 </head>
 <body class="locked">
+<audio id="weddingMusic" loop preload="auto">
+<source src="assets/music/wedding.mp3" type="audio/mpeg">
+</audio>
+<button id="musicToggle" title="Musik" style="position:fixed;right:20px;bottom:20px;z-index:85;width:48px;height:48px;border-radius:50%;border:1px solid #ffffff88;background:#17130fcc;color:#fff;cursor:pointer;font-size:18px;display:none">♫</button>
 <div id="loader"><div class="loader"><b>Z &amp; G</b><div class="bar"><i></i></div><small>MEMBUKA CERITA KAMI</small></div></div>
 
 <div id="cover">
@@ -167,7 +171,20 @@ const params=new URLSearchParams(location.search);
 const guest=params.get("to");
 if(guest){document.title=`Zulfa & Ghozi — ${decodeURIComponent(guest)}`;document.querySelector("#guestName").value=decodeURIComponent(guest)}
 window.addEventListener("load",()=>{setTimeout(()=>document.querySelector("#loader").style.opacity="0",650);setTimeout(()=>document.querySelector("#loader").remove(),1500)});
-document.querySelector("#open").onclick=()=>{document.querySelector("#cover").style.opacity="0";document.querySelector("#cover").style.pointerEvents="none";document.body.classList.remove("locked")};
+const music=document.querySelector("#weddingMusic"), musicToggle=document.querySelector("#musicToggle");
+let musicPlaying=false;
+function musicUI(){musicToggle.textContent=musicPlaying?"♫":"🔇";musicToggle.style.display="block";}
+document.querySelector("#open").onclick=()=>{
+document.querySelector("#cover").style.opacity="0";
+document.querySelector("#cover").style.pointerEvents="none";
+document.body.classList.remove("locked");
+music.volume=.42;
+music.play().then(()=>{musicPlaying=true;musicUI();}).catch(()=>musicUI());
+};
+musicToggle.onclick=()=>{
+if(music.paused){music.play().then(()=>{musicPlaying=true;musicUI();});}
+else{music.pause();musicPlaying=false;musicUI();}
+};
 const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("visible")}),{threshold:.12});
 document.querySelectorAll(".reveal").forEach(x=>observer.observe(x));
 function countdown(){let d=new Date(CONFIG.weddingDate)-Date.now();if(d<0)d=0;document.querySelector("#days").textContent=Math.floor(d/864e5);document.querySelector("#hours").textContent=Math.floor(d/36e5)%24;document.querySelector("#mins").textContent=Math.floor(d/6e4)%60;document.querySelector("#secs").textContent=Math.floor(d/1e3)%60}
