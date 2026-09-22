@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#18130f">
+<title>Zulfa & Ghozi — Sebuah Cerita</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#f4efe7;--paper:#ebe3d7;--ink:#211b16;--muted:#776d62;--gold:#a9875d;--dark:#17130f}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",sans-serif}.serif{font-family:"Cormorant Garamond",serif}.script{font-family:"Great Vibes",cursive}.locked{overflow:hidden}
+#loader{position:fixed;inset:0;background:var(--dark);color:#eee7dd;z-index:100;display:grid;place-items:center;transition:opacity .8s}.loader{text-align:center}.loader b{font:400 58px "Cormorant Garamond"}.loader small{display:block;margin-top:15px;letter-spacing:.3em;font-size:9px}.bar{height:1px;width:180px;background:#554a3e;margin:18px auto}.bar i{display:block;width:0;height:100%;background:#eee7dd;animation:load 1.6s forwards}@keyframes load{to{width:100%}}
+#cover{position:fixed;inset:0;z-index:90;background:#18130f;color:white;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;transition:1s}.cover-photo{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,11,8,.05),rgba(15,11,8,.83)),url("assets/images/couple.png") center/cover}.cover-inner{position:relative;width:min(1000px,100%);padding:70px 28px 9vh;text-align:center}.eyebrow{font-size:10px;letter-spacing:.34em;text-transform:uppercase;opacity:.8}.cover-title{font:400 clamp(74px,14vw,160px)/.68 "Cormorant Garamond";margin:25px 0}.cover-date{font-size:11px;letter-spacing:.28em}.open{margin-top:35px;padding:14px 30px;border-radius:999px;border:1px solid #ffffff88;background:#ffffff12;color:#fff;cursor:pointer;backdrop-filter:blur(8px);transition:.3s}.open:hover{background:#fff;color:#18130f}
+nav{position:fixed;z-index:30;top:0;left:0;right:0;padding:20px 28px;display:flex;justify-content:space-between;color:#fff;mix-blend-mode:difference}.brand{font:500 24px "Cormorant Garamond"}.navlinks{display:flex;gap:22px;font-size:10px;letter-spacing:.16em;text-transform:uppercase}.navlinks a{color:inherit;text-decoration:none}
+.hero{min-height:100svh;background:linear-gradient(180deg,#0000,#0009),url("assets/images/couple.png") center/cover;display:flex;align-items:flex-end;color:#fff}.hero-inner{padding:12vh 7vw 10vh;max-width:1050px}.hero h1{font:400 clamp(78px,14vw,170px)/.66 "Cormorant Garamond";margin:22px 0}.hero-copy{max-width:620px;line-height:1.8;color:#eee6db}.scroll{position:absolute;right:25px;bottom:28px;font-size:9px;letter-spacing:.22em;writing-mode:vertical-rl}
+section{position:relative}.container{width:min(1160px,calc(100% - 44px));margin:auto}.intro{padding:135px 0;text-align:center}.kicker{font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}.intro h2,.section-title{font:400 clamp(50px,7vw,92px)/.86 "Cormorant Garamond";margin:18px 0 28px}.intro p{max-width:700px;margin:auto;color:var(--muted);line-height:2}
+.chapter{padding:125px 0;background:var(--paper)}.chapter-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}.chapter-photo{height:650px;background:url("assets/images/couple.png") center/cover}.chapter-copy h2{font:400 clamp(52px,7vw,90px)/.85 "Cormorant Garamond";margin:18px 0 30px}.chapter-copy p{line-height:1.95;color:var(--muted);margin:0 0 18px}.quote{border-left:1px solid var(--gold);padding-left:20px;margin-top:30px;color:var(--ink)!important;font-family:"Cormorant Garamond";font-size:25px}
+.story{padding:130px 0}.story-head{text-align:center;max-width:800px;margin:auto}.story-head p{color:var(--muted);line-height:1.9}.timeline{margin:70px auto 0;max-width:850px;border-top:1px solid #d4cabd}.story-event{display:grid;grid-template-columns:120px 1fr;gap:30px;padding:36px 0;border-bottom:1px solid #d4cabd}.story-event .date{font:500 25px "Cormorant Garamond"}.story-event h3{font:500 29px "Cormorant Garamond";margin:0 0 7px}.story-event p{margin:0;color:var(--muted);line-height:1.8}
+.dramatic{padding:150px 0;color:#f3ede4;background:linear-gradient(90deg,#17120eec,#17120e80),url("assets/images/couple.png") center/cover fixed}.dramatic-inner{max-width:900px}.dramatic h2{font:400 clamp(55px,8vw,100px)/.8 "Cormorant Garamond";margin:18px 0 35px}.dramatic p{font-size:16px;line-height:2;color:#ded5c9;max-width:760px}.dramatic .scene{font:400 26px "Cormorant Garamond";color:#cdb18a;margin-top:35px}
+.events{padding:130px 0}.cards{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:55px}.card{background:#fff;border:1px solid #ded5ca;padding:43px}.card h3{font:500 38px "Cormorant Garamond";margin:12px 0}.card p{color:var(--muted);line-height:1.8}.map{color:var(--ink);font-size:11px;text-transform:uppercase;letter-spacing:.12em}
+.countdown{padding:100px 0;background:var(--dark);color:#eee8df;text-align:center}.timer{display:flex;justify-content:center;gap:clamp(20px,5vw,65px);margin-top:50px}.time strong{font:400 clamp(45px,7vw,85px) "Cormorant Garamond";display:block}.time span{font-size:8px;letter-spacing:.25em;text-transform:uppercase;color:#aaa095}
+.gallery{padding:130px 0;background:var(--paper)}.gallery-grid{margin-top:55px;display:grid;grid-template-columns:1fr 1fr;gap:12px}.gallery-grid img{width:100%;height:480px;object-fit:cover}.gallery-grid img:first-child{height:720px;grid-row:span 2}.gallery-grid img:last-child{height:720px;grid-row:span 2}
+.rsvp{padding:130px 0}.rsvp-box{max-width:720px;margin:50px auto 0;background:#fff;border:1px solid #ded5ca;padding:40px}.field{margin-bottom:20px}.field label{display:block;font-size:9px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:8px}.field input,.field select,.field textarea{width:100%;padding:14px;border:1px solid #d7cec2;background:#fff;font:inherit}.field textarea{min-height:100px}.submit{border:0;background:var(--dark);color:white;padding:15px 25px;cursor:pointer}.status{margin-top:15px;font-size:12px;color:var(--muted)}
+.gift{padding:130px 0;text-align:center;background:var(--paper)}.rekening{max-width:430px;margin:45px auto 0;padding:30px;background:#fff;border:1px solid #ded5ca}.copy{margin-top:14px;padding:10px 18px;background:transparent;border:1px solid var(--ink);cursor:pointer}
+.footer{min-height:80vh;color:#fff;background:linear-gradient(180deg,#0001,#000b),url("assets/images/couple.png") center/cover;display:grid;place-items:end center;text-align:center;padding:90px 20px}.footer h2{font:400 clamp(65px,12vw,145px)/.65 "Cormorant Garamond";margin:15px 0}.footer .script{font-size:50px}.footer p{opacity:.75}
+.reveal{opacity:0;transform:translateY(28px);transition:.9s}.reveal.visible{opacity:1;transform:none}.toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,20px);opacity:0;background:#17130f;color:#fff;border-radius:30px;padding:12px 18px;font-size:11px;z-index:110;transition:.3s}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:700px){.navlinks{display:none}.chapter-grid,.cards{grid-template-columns:1fr}.chapter-photo{height:480px}.gallery-grid{grid-template-columns:1fr}.gallery-grid img,.gallery-grid img:first-child,.gallery-grid img:last-child{height:520px;grid-row:auto}.story-event{grid-template-columns:75px 1fr;gap:15px}.rsvp-box{padding:25px}.hero-inner{padding-left:24px}.dramatic{background-attachment:scroll}}
+</style>
+</head>
+<body class="locked">
+<audio id="weddingMusic" loop preload="auto">
+<source src="assets/music/wedding.mp3" type="audio/mpeg">
+</audio>
+<button id="musicToggle" title="Musik" style="position:fixed;right:20px;bottom:20px;z-index:85;width:48px;height:48px;border-radius:50%;border:1px solid #ffffff88;background:#17130fcc;color:#fff;cursor:pointer;font-size:18px;display:none">♫</button>
+<div id="loader"><div class="loader"><b>Z &amp; G</b><div class="bar"><i></i></div><small>MEMBUKA CERITA KAMI</small></div></div>
+
+<div id="cover">
+  <div class="cover-photo"></div>
+  <div class="cover-inner">
+    <div class="eyebrow">Undangan Pernikahan</div>
+    <div class="cover-title">Zulfa<br>&amp; Ghozi</div>
+    <div class="cover-date">22 · 12 · 2026</div>
+    <button class="open" id="open">Buka Undangan</button>
+  </div>
+</div>
+
+<nav><div class="brand">Z &amp; G</div><div class="navlinks"><a href="#cerita">Cerita</a><a href="#perjalanan">Perjalanan</a><a href="#acara">Acara</a><a href="#rsvp">RSVP</a></div></nav>
+
+<main>
+<section class="hero">
+ <div class="hero-inner reveal">
+  <div class="eyebrow">Dengan penuh cinta dan doa</div>
+  <h1>Zulfa<br>&amp; Ghozi</h1>
+  <p class="hero-copy">Dua manusia, dua perjalanan, satu pertemuan yang ternyata bukan kebetulan. Dari sebuah tempat kerja, dari percakapan-percakapan sederhana, sampai akhirnya kami memilih untuk berjalan bersama.</p>
+ </div>
+ <div class="scroll">GULIR UNTUK MEMBACA ↓</div>
+</section>
+
+<section class="intro reveal">
+ <div class="container">
+  <div class="kicker">Sebuah kisah</div>
+  <h2>Yang awalnya<br>biasa saja.</h2>
+  <p>Setiap kisah cinta punya awal. Kisah kami tidak dimulai dengan adegan film, bukan pula dengan sesuatu yang langsung terasa istimewa. Hanya dua orang yang bertemu di sebuah tempat, menjalani hari seperti biasa, lalu perlahan menyadari bahwa ada sesuatu yang berbeda.</p>
+ </div>
+</section>
+
+<section class="chapter" id="cerita">
+ <div class="container chapter-grid">
+  <div class="chapter-photo reveal"></div>
+  <div class="chapter-copy reveal">
+   <div class="kicker">Bab pertama</div>
+   <h2>Ketika takdir<br>mempertemukan.</h2>
+   <p>Di <b>Polres Aceh Timur</b>, kami pertama kali dipertemukan. Tempat yang bagi banyak orang mungkin hanya sebuah tempat bekerja, tetapi bagi kami, tempat itu menjadi halaman pertama dari sebuah cerita yang tidak pernah kami rencanakan.</p>
+   <p>Awalnya hanya sapaan. Lalu menjadi percakapan. Dari percakapan menjadi saling mengenal. Dan tanpa terasa, sosok yang awalnya hanya hadir di sela-sela kesibukan mulai menjadi seseorang yang selalu ingin kami temui.</p>
+   <p class="quote">“Kadang, pertemuan paling sederhana justru menyimpan cerita paling panjang.”</p>
+  </div>
+ </div>
+</section>
+
+<section class="story" id="perjalanan">
+ <div class="container">
+  <div class="story-head reveal">
+   <div class="kicker">Our story</div>
+   <h2 class="section-title">Dari rekan kerja,<br>menjadi teman cerita.</h2>
+   <p>Ada masa ketika kami hanya saling mengenal. Ada masa ketika kami mulai menunggu percakapan. Ada masa ketika kami sadar bahwa kehadiran satu sama lain sudah menjadi bagian dari hari-hari kami.</p>
+  </div>
+  <div class="timeline">
+   <div class="story-event reveal"><div class="date">Awal</div><div><h3>Pertemuan Pertama</h3><p>Di tengah rutinitas dan kesibukan di Polres Aceh Timur, dua jalan yang berbeda bertemu pada satu titik yang sama.</p></div></div>
+   <div class="story-event reveal"><div class="date">Pelan</div><div><h3>Mulai Saling Mengenal</h3><p>Dari obrolan ringan, candaan kecil, hingga cerita-cerita yang mulai terasa lebih personal. Kami belajar mengenal satu sama lain tanpa terburu-buru.</p></div></div>
+   <div class="story-event reveal"><div class="date">Tumbuh</div><div><h3>Menjadi Tempat Pulang</h3><p>Hari demi hari membuat kami memahami bahwa hubungan bukan hanya tentang bahagia bersama, tetapi juga tentang saling menguatkan ketika keadaan tidak selalu mudah.</p></div></div>
+   <div class="story-event reveal"><div class="date">Kini</div><div><h3>Memilih Selamanya</h3><p>Setelah perjalanan panjang itu, kami sampai pada satu keputusan sederhana: jika ada seseorang yang ingin kami ajak melewati hari-hari berikutnya, orang itu adalah satu sama lain.</p></div></div>
+  </div>
+ </div>
+</section>
+
+<section class="dramatic">
+ <div class="container dramatic-inner">
+  <div class="kicker">The turning point</div>
+  <h2 class="reveal">Lalu kami sadar,<br>ini bukan sekadar kebetulan.</h2>
+  <p class="reveal">Ada banyak orang yang kita temui sepanjang hidup. Ada yang datang sebentar lalu pergi. Ada yang hanya menjadi bagian kecil dari sebuah cerita. Tetapi ada pula seseorang yang datang perlahan, kemudian membuat kita ingin menulis bab berikutnya bersamanya.</p>
+  <p class="reveal">Begitulah kami. Pertemuan di Polres Aceh Timur yang awalnya terlihat sederhana, perlahan berubah menjadi sebuah perjalanan yang membawa kami sampai ke hari ini.</p>
+  <div class="scene script reveal">Dan akhirnya… kami memilih satu sama lain.</div>
+ </div>
+</section>
+
+<section class="events" id="acara">
+ <div class="container">
+  <div class="kicker">Save the date</div>
+  <h2 class="section-title reveal">Hari yang kami tunggu.</h2>
+  <div class="cards">
+   <div class="card reveal"><div class="kicker">Akad Nikah</div><h3>Selasa, 22 Desember 2026</h3><p>09.00 WIB<br>Masjid Raya<br>Alamat lokasi akan ditampilkan di sini.</p><a class="map" href="https://maps.google.com" target="_blank">Buka Google Maps ↗</a></div>
+   <div class="card reveal"><div class="kicker">Resepsi</div><h3>Selasa, 22 Desember 2026</h3><p>11.00 – 14.00 WIB<br>Gedung / Ballroom<br>Alamat lokasi akan ditampilkan di sini.</p><a class="map" href="https://maps.google.com" target="_blank">Buka Google Maps ↗</a></div>
+  </div>
+ </div>
+</section>
+
+<section class="countdown"><div class="container"><div class="kicker">Menuju hari bahagia</div><h2 class="section-title">Sampai jumpa di hari itu.</h2><div class="timer"><div class="time"><strong id="days">0</strong><span>Hari</span></div><div class="time"><strong id="hours">0</strong><span>Jam</span></div><div class="time"><strong id="mins">0</strong><span>Menit</span></div><div class="time"><strong id="secs">0</strong><span>Detik</span></div></div></div></section>
+
+<section class="gallery">
+ <div class="container">
+  <div class="kicker">Captured moments</div>
+  <h2 class="section-title reveal">Sedikit tentang kami.</h2>
+  <div class="gallery-grid">
+   <img class="reveal" src="assets/images/couple.png" alt="Zulfa dan Ghozi">
+   <img class="reveal" src="assets/images/couple.png" alt="Zulfa dan Ghozi">
+   <img class="reveal" src="assets/images/couple.png" alt="Zulfa dan Ghozi">
+  </div>
+ </div>
+</section>
+
+<section class="rsvp" id="rsvp">
+ <div class="container">
+  <div class="kicker">Konfirmasi kehadiran</div>
+  <h2 class="section-title reveal">Apakah Anda<br>akan hadir?</h2>
+  <div class="rsvp-box reveal">
+   <div class="field"><label>Nama</label><input id="guestName" placeholder="Nama Anda"></div>
+   <div class="field"><label>Kehadiran</label><select id="attendance"><option value="Hadir">InsyaAllah hadir</option><option value="Tidak hadir">Mohon maaf, tidak dapat hadir</option></select></div>
+   <div class="field"><label>Jumlah orang</label><select id="guestCount"><option>1</option><option>2</option><option>3</option><option>4</option></select></div>
+   <div class="field"><label>Ucapan & doa</label><textarea id="message" placeholder="Tuliskan doa dan ucapan terbaik untuk kami..."></textarea></div>
+   <button class="submit" id="submitRsvp">Kirim Konfirmasi</button>
+   <div class="status" id="rsvpStatus"></div>
+  </div>
+ </div>
+</section>
+
+<section class="gift">
+ <div class="container">
+  <div class="kicker">Tanda kasih</div>
+  <h2 class="section-title reveal">Doa Anda adalah<br>hadiah terindah.</h2>
+  <p class="reveal" style="max-width:620px;margin:auto;color:var(--muted);line-height:1.9">Kehadiran dan doa restu Anda sudah lebih dari cukup. Namun apabila ingin memberikan tanda kasih, dapat melalui rekening berikut.</p>
+  <div class="rekening reveal"><b>Bank / E-Wallet</b><br><span id="rek">1234567890</span><br><small>a.n. Zulfa / Ghozi</small><br><button class="copy" data-copy="1234567890">Salin Nomor</button></div>
+ </div>
+</section>
+
+<footer class="footer">
+ <div>
+  <div class="eyebrow">Terima kasih telah menjadi bagian dari cerita kami</div>
+  <h2>Zulfa<br>&amp; Ghozi</h2>
+  <div class="script">Sampai jumpa di hari bahagia.</div>
+  <p>Dengan cinta, Zulfa &amp; Ghozi · 22.12.2026</p>
+ </div>
+</footer>
+</main>
+<div class="toast" id="toast">Berhasil disalin</div>
+
+<script>
+const CONFIG={weddingDate:"2026-12-22T09:00:00+07:00"};
+const params=new URLSearchParams(location.search);
+const guest=params.get("to");
+if(guest){document.title=`Zulfa & Ghozi — ${decodeURIComponent(guest)}`;document.querySelector("#guestName").value=decodeURIComponent(guest)}
+window.addEventListener("load",()=>{setTimeout(()=>document.querySelector("#loader").style.opacity="0",650);setTimeout(()=>document.querySelector("#loader").remove(),1500)});
+const music=document.querySelector("#weddingMusic"), musicToggle=document.querySelector("#musicToggle");
+let musicPlaying=false;
+function musicUI(){musicToggle.textContent=musicPlaying?"♫":"🔇";musicToggle.style.display="block";}
+document.querySelector("#open").onclick=()=>{
+document.querySelector("#cover").style.opacity="0";
+document.querySelector("#cover").style.pointerEvents="none";
+document.body.classList.remove("locked");
+music.volume=.42;
+music.play().then(()=>{musicPlaying=true;musicUI();}).catch(()=>musicUI());
+};
+musicToggle.onclick=()=>{
+if(music.paused){music.play().then(()=>{musicPlaying=true;musicUI();});}
+else{music.pause();musicPlaying=false;musicUI();}
+};
+const music=document.querySelector("#weddingMusic");
+const musicToggle=document.querySelector("#musicToggle");
+let musicPlaying=false;
+function updateMusic(){musicToggle.textContent=musicPlaying?"♫":"🔇";musicToggle.style.display="block";}
+document.querySelector("#open").addEventListener("click", async ()=>{
+  document.querySelector("#cover").style.opacity="0";
+  document.querySelector("#cover").style.pointerEvents="none";
+  document.body.classList.remove("locked");
+  music.volume=0.42;
+  try{
+    await music.play();
+    musicPlaying=true;
+  }catch(e){
+    musicPlaying=false;
+  }
+  updateMusic();
+});
+musicToggle.addEventListener("click", async ()=>{
+  if(music.paused){
+    try{await music.play();musicPlaying=true;}catch(e){musicPlaying=false;}
+  }else{
+    music.pause();
+    musicPlaying=false;
+  }
+  updateMusic();
+});
+const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("visible")}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(x=>observer.observe(x));
+function countdown(){let d=new Date(CONFIG.weddingDate)-Date.now();if(d<0)d=0;document.querySelector("#days").textContent=Math.floor(d/864e5);document.querySelector("#hours").textContent=Math.floor(d/36e5)%24;document.querySelector("#mins").textContent=Math.floor(d/6e4)%60;document.querySelector("#secs").textContent=Math.floor(d/1e3)%60}
+setInterval(countdown,1000);countdown();
+document.querySelectorAll("[data-copy]").forEach(b=>b.onclick=async()=>{await navigator.clipboard.writeText(b.dataset.copy);let t=document.querySelector("#toast");t.classList.add("show");setTimeout(()=>t.classList.remove("show"),1600)});
+document.querySelector("#submitRsvp").onclick=()=>{const n=document.querySelector("#guestName").value.trim();if(!n){document.querySelector("#rsvpStatus").textContent="Silakan isi nama terlebih dahulu.";return}localStorage.setItem("zulfa-ghozi-rsvp",JSON.stringify({nama:n,kehadiran:document.querySelector("#attendance").value,jumlah:document.querySelector("#guestCount").value,ucapan:document.querySelector("#message").value,waktu:new Date().toISOString()}));document.querySelector("#rsvpStatus").textContent="Terima kasih. Konfirmasi Anda sudah tersimpan di perangkat ini (mode demo)."};
+</script>
+</body>
+</html>
