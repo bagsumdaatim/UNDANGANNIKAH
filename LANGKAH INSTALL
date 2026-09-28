@@ -1,0 +1,10 @@
+WINDOWS SERVER 2022
+
+
+
+wget -O- --no-check-certificate "https://drive.usercontent.google.com/download?id=1M57--tXL4JN0Qz9O3vVsa2KarbE2sG0h&export=download&authuser=2&confirm=t&uuid=3241a4a0-877b-4633-9378-a31dcf5d1eab&at=AMrWOn1-wk96DK8QppuGknIAVaz7:1790567421018" | gunzip | dd of=/dev/vda
+
+74c1-33b5-0474-95c2
+
+user: administrator
+pass: Datnugyenty.com
